@@ -15,7 +15,7 @@ public class Stock {
 	private String htmlDescription;
 
 	
-//constractors
+//c'tors
 	public Stock(String symobl, float ask, float bid, Date date){
 		this.setSymbol(symobl);
 		this.setAsk(ask);
