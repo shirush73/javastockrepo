@@ -36,7 +36,6 @@ public class StockDetailsServlet extends HttpServlet {
 	stock1 = new Stock("PIH", (float)13.1, (float)12.4, date1);
 	stock2 = new Stock("AAL", (float)5.78, (float)5.5,  date2);
 	stock3 = new Stock("CAAS",(float)32.2, (float)31.5, date3);
-	//חיביים מופע חדש לכל מניה
 	
 	
 	
