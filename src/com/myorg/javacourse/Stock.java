@@ -7,12 +7,19 @@ import java.util.Date;
 
 public class Stock {
 //static members
+	public final int BUY = 0;
+	public final int SELL = 1;
+	public final int REMOVE = 2;
+	public final int HOLD = 3;
+
 	
 //data members
 	private String symbol;
 	private float ask, bid;
 	private Date date; 
 	private String htmlDescription;
+	private int recommendation, stockQuantity;
+	
 
 	
 //c'tors
