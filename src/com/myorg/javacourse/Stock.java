@@ -20,7 +20,6 @@ public class Stock {
 	private String htmlDescription;
 	private int recommendation, stockQuantity;
 	
-
 	
 //c'tors
 	public Stock(String symobl, float ask, float bid, Date date){
@@ -38,7 +37,6 @@ public class Stock {
 		
 		htmlDescription = new String("<b>Stock symbol</b>: "+this.getSymbol()+", <b>Ask</b>: "+this.getAsk()+", <b>Bid</b>: "+this.getBid()+", <b>Date</b>: "+dateStr);
 		return htmlDescription;
-	
 	}
 //Getters and Setters
 	public String getSymbol() {

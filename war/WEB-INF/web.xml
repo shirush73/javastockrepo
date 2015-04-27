@@ -37,7 +37,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>PortfolioServlet</servlet-name>
-		<servlet-class>com.myorg.javacourse.PortfolioServlet</servlet-class>
+		<servlet-class>com.myorg.stock.servlet.PortfolioServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
