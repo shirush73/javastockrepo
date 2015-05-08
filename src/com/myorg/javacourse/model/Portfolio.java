@@ -55,7 +55,6 @@ public class Portfolio {
 	 * checks if this stocks is not null and if there is a space in array
 	 */
 	
-	
 	public void addStock(Stock stock){
 		if(stock != null && portFolioSize < MAX_PORTFOLIO_SIZE){
 		this.stocks[portFolioSize] = stock;
