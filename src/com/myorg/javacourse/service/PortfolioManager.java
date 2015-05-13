@@ -8,56 +8,56 @@ import com.myorg.javacourse.model.Stock;
 
 public class PortfolioManager {
 	
-//const members
+//consts members
 	
 //data members
-	Portfolio portfolio;
 	Stock stock1, stock2, stock3 ;
 	
 //c'tor
-	public PortfolioManager(){  // there is a default already  
+	public PortfolioManager(){  // there is a default already
+		
 	}
 	
-	/**
-	 * this package means to service and manages all the information about the instances and do actions on the model package (portfolio)
-	 * in this case e.g: to sell stock from the stocks array  
-	 * @return
-	 */
 //methods
 	
 	public Portfolio getPortfolio(String title){
-		Portfolio portfolio1 = new Portfolio(title);
-	
-	
-		/** Java Doc: creating an instance that includes all the data about the stocks array - means as model package 
-		 * in each of date instance there are its time details which was defined before by set.cal method
-		 */
 		
 		Calendar cal =  Calendar.getInstance();
-		cal.set(2014, 10, 15);
+		cal.set(2014, 11, 15);
 		Date date1 = cal.getTime();
 		
-		cal.set(2014, 10, 15);
+		cal.set(2014, 11, 15);
 		Date date2 = cal.getTime();
 		
-		cal.set(2014, 10, 15);
+		cal.set(2014, 11, 15);
 		Date date3 = cal.getTime();
-		 
-		/** there are three (instances)stocks meantime that include all these details - from exercise 04
-		 * in the second phase we move the stocks's information under the portfolio package for saving-maintenance them
-		 * then return the pointer of the first stocks array (portfolio)
-		 */
 		
-		stock1 = new Stock("PIH", (float)13.1, (float)12.4, date1);
-		stock2 = new Stock("AAL", (float)5.78, (float)5.5,  date2);
-		stock3 = new Stock("CAAS",(float)32.2, (float)31.5, date3);
+		Portfolio myPortfolio = new Portfolio(" Exercise 7 Portfolio"); // the string's name is called in servlet
 		
-
-		portfolio1.addStock(stock1);
-		portfolio1.addStock(stock2);
-		portfolio1.addStock(stock3);
+		myPortfolio.setBalance(10000);
 		
-		return portfolio1;
+		
+		stock1 = new Stock("PIH", (float)10.0, (float)8.5,  date1, 0);
+		stock2 = new Stock("AAL", (float)30.0, (float)25.5, date2, 0);
+		stock3 = new Stock("CAAS",(float)20.0, (float)15.5, date3, 0);
+		
+		// calling to functions //
+		
+		myPortfolio.buyStock(stock1, 20);
+		myPortfolio.buyStock(stock2, 30);
+		myPortfolio.buyStock(stock3, 40);
+		
+		myPortfolio.sellStock("AAL", 30);
+		myPortfolio.removeStock("CAAS");
+		
+		
+		//Portfolio portfolio1 = new Portfolio(title); //the same as myPortfolio
+	
+		//portfolio1.addStock(stock1);
+		//portfolio1.addStock(stock2);
+		//portfolio1.addStock(stock3);
+		
+		return myPortfolio;
 	}
 
 	public Portfolio getPortfolio(Portfolio portfolio){
