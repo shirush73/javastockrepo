@@ -213,6 +213,11 @@ public class Portfolio {
 					 System.out.println("Sorry, But not enough stocks to sell");
 					 return isSuccess;
 					 
+				 }else if( quantity < 0){ // in case of quantity is negative number - we cannot sell
+					 
+					 System.out.println("Error input - check again");
+					 return isSuccess;
+					 
 				 }else{   // case o.k - the stock exists and there are enough stocks to sell
 					 
 					 updateBalance((float)(quantity) * stocks[i].getBid());
