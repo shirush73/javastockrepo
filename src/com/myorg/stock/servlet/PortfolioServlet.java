@@ -55,18 +55,12 @@ public class PortfolioServlet extends HttpServlet{
 			//resp.getWriter().println(portfolio2.getHtmlString()); // print p.f #2 - value changed
 			
 			
-			
-		///****** EX 07 *******
-			
-			
+		///************** EX 07 *************
 			
 			Portfolio myPortfolio = portfolioManager.getPortfolio("");
 			
 			resp.getWriter().println(myPortfolio.getHtmlString());
 			
-		
-
-
 			
 			}
 }

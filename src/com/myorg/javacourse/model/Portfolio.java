@@ -266,7 +266,6 @@ public class Portfolio {
 	}
 	
 	
-	
 	/**       ***************** buyStock method *********************
 	 
 	 * @param stock and number of units of this stock to buy
@@ -335,7 +334,6 @@ public class Portfolio {
 	
 	
 		
-		
 		/**      ***************** getStockValue *******************
 		 
 		 * get out through the array and calculates the value of stocks by the number of units and its bid price
@@ -369,6 +367,5 @@ public class Portfolio {
 		totalValueOfPortfolio = getBalance() + getStockValue();
 		
 		return totalValueOfPortfolio;
-	
 	}
 }

@@ -26,7 +26,7 @@ public class Stock {
 	private Date date; 
 	private String htmlDescription;
 	private int stockQuantity ;
-	private ALGO_RECOMMENDATION recommendation;
+	private ALGO_RECOMMENDATION recommendation;  // part of enum
 	
 
 	

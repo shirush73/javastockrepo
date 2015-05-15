@@ -65,5 +65,4 @@ public class PortfolioManager {
 		
 		return portfolio2;
 	}
-	
 }
