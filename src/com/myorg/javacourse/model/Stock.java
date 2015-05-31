@@ -2,22 +2,16 @@ package com.myorg.javacourse.model;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
+
+import org.algo.model.StockInterface;
+import org.algo.service.PortfolioManagerInterface.OPERATION;
 
 import com.myorg.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
 
 
 
-/** Class Stock - Javadocs
- 
- * this class includes three instances about stocks data
- * Each stock is a new instance and includes some members (symbul, bid, ask etc..)
- * It has a c'tor which initialized by data as following and the second c'tor is got object - copy c'tor 
- * @author shirush
- */
-
-public class Stock {
+public class Stock implements StockInterface{
 		
 //data members (primitive and objects)
 
@@ -27,32 +21,39 @@ public class Stock {
 	private String htmlDescription;
 	private int stockQuantity ;
 	private ALGO_RECOMMENDATION recommendation;  // part of enum
-	
+	//private OPERATION recommendation1;  // part of enum
+
 
 	
 //c'tor  - initializes the new instance
 	
 
+
 	public Stock(String symobl, float ask, float bid, Date date, int quantity){
 		this.setSymbol(symobl);
 		this.setAsk(ask);
 		this.setBid(bid);
-		this.setDate(date);
+		this.setDate(date.getTime());
 		this.setStockQuantity(quantity);
 	}
 	
 //copy c'tor - coping by value  
 
-	public Stock(Stock stock){
+	public Stock(StockInterface stock){
 		
-		this(new String (stock.getSymbol()),stock.getAsk(),stock.getBid(),new Date(stock.getDate().getTime()), stock.getStockQuantity());
+		this(new String (stock.getSymbol()),stock.getAsk(),stock.getBid(),new Date(stock.getDate().getTime()), ((Stock) stock).getStockQuantity());
+	}
+	
+	
+	public Stock() {
+
 	}
 	
 	
 // *******************************   other methods *********************************
 	
-	
-	
+
+
 	/************************* getHtmlDescription method **************************
 	 
 	 * in each stock (instance) prints the details to screen/console  
@@ -99,9 +100,11 @@ public class Stock {
 		return date;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(long num) {
+		Date date = new Date(num * 1000);		
+		this.date =date;
 	}
+	
 	public int getStockQuantity() {
 		return stockQuantity;
 	}
@@ -109,4 +112,25 @@ public class Stock {
 	public void setStockQuantity(int stockQuantity) {
 		this.stockQuantity = stockQuantity;
 	}
+
+	public ALGO_RECOMMENDATION getRecommendation() {
+		return recommendation;
+	}
+
+	public void setRecommendation(ALGO_RECOMMENDATION recommendation) {
+		this.recommendation = recommendation;
+	}
+	
+	/*public OPERATION getRecommendation1() {
+		return recommendation1;
+	}
+
+	public void setRecommendation1(OPERATION recommendation1) {
+		this.recommendation1 = recommendation1;
+	}
+	*/
+
+
+
+	
 }
