@@ -183,7 +183,6 @@ public class PortfolioManager implements PortfolioManagerInterface{
 	}
 
 	
-	
 		/**
 		 * Buy stock
 		 */
@@ -204,8 +203,6 @@ public class PortfolioManager implements PortfolioManagerInterface{
 			}
 		}
 		
-
-	
 		/**
 		 * update database with new portfolio's data
 		 * @param portfolio
@@ -325,8 +322,6 @@ public class PortfolioManager implements PortfolioManagerInterface{
 	
 	
 	
-	
-	
 	/**
 	 * A method that returns a new instance of Portfolio copied from another instance.
 	 * @param portfolio		Portfolio to copy.
@@ -372,7 +367,7 @@ public class PortfolioManager implements PortfolioManagerInterface{
 
 
 
-
+// NOT RELEVANTS IN THIS EXERSIZE //
 	
 	/*public PortfolioInterface getPortfolio(){
 		

@@ -17,5 +17,4 @@ public class InitServlet extends HttpServlet {
 		PortfolioManager pm = new PortfolioManager();
 		ServiceManager.setPortfolioManager(pm);
 	}
-
 }

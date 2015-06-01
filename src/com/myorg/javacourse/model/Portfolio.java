@@ -20,10 +20,7 @@ public class Portfolio implements PortfolioInterface {
 	public enum ALGO_RECOMMENDATION{
 		BUY, SELL, REMOVE, HOLD;
 	}
-	/*public enum OPERATION{
-		BUY, SELL, REMOVE, ADD;
-	}
-	*/
+
 
 //data members
 	private String title;
@@ -31,8 +28,6 @@ public class Portfolio implements PortfolioInterface {
 	private int portFolioSize; // an index which advances the array = logic size
 	private String htmlString;
 	private float balance = 0;
-	
-
 	
 	
 //                 ************ c'tor - initializes the instance ************
@@ -85,7 +80,6 @@ public class Portfolio implements PortfolioInterface {
 //Getters & Setters
 	
 	
-
 	public String getTitle() {
 		return title;
 	}
@@ -118,7 +112,7 @@ public class Portfolio implements PortfolioInterface {
 //                           ************ Other Methods ***************
 	
 	
-	
+
 /**  ******************* addStock method *********************
  
  * receives Stock instance add needs to add it to portfolio - stocks array

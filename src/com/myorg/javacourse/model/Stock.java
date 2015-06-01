@@ -10,7 +10,6 @@ import org.algo.service.PortfolioManagerInterface.OPERATION;
 import com.myorg.javacourse.model.Portfolio.ALGO_RECOMMENDATION;
 
 
-
 public class Stock implements StockInterface{
 		
 //data members (primitive and objects)
@@ -23,12 +22,9 @@ public class Stock implements StockInterface{
 	private ALGO_RECOMMENDATION recommendation;  // part of enum
 	//private OPERATION recommendation1;  // part of enum
 
-
 	
 //c'tor  - initializes the new instance
 	
-
-
 	public Stock(String symobl, float ask, float bid, Date date, int quantity){
 		this.setSymbol(symobl);
 		this.setAsk(ask);
@@ -44,7 +40,7 @@ public class Stock implements StockInterface{
 		this(new String (stock.getSymbol()),stock.getAsk(),stock.getBid(),new Date(stock.getDate().getTime()), ((Stock) stock).getStockQuantity());
 	}
 	
-	
+// default cto'r
 	public Stock() {
 
 	}
