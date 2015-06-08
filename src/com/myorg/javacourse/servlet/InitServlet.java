@@ -1,4 +1,4 @@
-package com.myorg.stock.servlet;
+package com.myorg.javacourse.servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
